@@ -1,8 +1,6 @@
-import { Response } from "express";
-
-export const sucessStatus = (dataToResponse: any) => ({
+export const sucessStatus = (data: any) => ({
   statuscode: 200,
-  dataToResponse,
+  data,
 });
 
 export const failedStatus = (errorDescription: any) => ({

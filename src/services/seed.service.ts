@@ -23,6 +23,7 @@ export class SeedService {
     await this.deleteCategories();
     await this.deleteSuppliers();
   }
+
   private async deleteCategories() {
     await db.query(
       `
@@ -42,6 +43,7 @@ export class SeedService {
       }
     );
   }
+
   private async deleteSuppliers() {
     await db.query(
       `
@@ -61,6 +63,7 @@ export class SeedService {
       }
     );
   }
+
   private async deleteProducts() {
     {
       await db.query(

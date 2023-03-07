@@ -8,7 +8,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const sequelize_1 = require("sequelize");
 dotenv_1.default.config();
 exports.db = new sequelize_1.Sequelize(process.env.DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
-    host: "localhost",
+    host: process.env.DB_HOST,
     dialect: "mysql",
     define: {
         scopes: {

@@ -39,8 +39,12 @@ productsRoutes.post(
     check("isActive", "isActive param must be a integer value")
       .optional()
       .isInt(),
-    check("createDate", "createDate param must be a date").isString(),
-    check("updateDate", "updateDate param must be a date").isString(),
+    check("createDate", "createDate param must be a date")
+      .optional()
+      .isString(),
+    check("updateDate", "updateDate param must be a date")
+      .optional()
+      .isString(),
     check("fullProductName", "fullProductName must be max 100").isLength({
       max: 100,
     }),
@@ -101,8 +105,12 @@ productsRoutes.put(
     check("isActive", "isActive param must be a integer value")
       .optional()
       .isInt(),
-    //check("createDate", "createDate param must be a integer value").isString(),
-    //check("updateDate", "updateDate param must be a integer value").isString(),
+    check("createDate", "createDate param must be a integer value")
+      .optional()
+      .isString(),
+    check("updateDate", "updateDate param must be a integer value")
+      .optional()
+      .isString(),
     check("fullProductName", "fullProductName must be max 100").isLength({
       max: 100,
     }),

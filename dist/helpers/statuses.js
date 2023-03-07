@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.failedStatus = exports.sucessStatus = void 0;
-const sucessStatus = (dataToResponse) => ({
+const sucessStatus = (data) => ({
     statuscode: 200,
-    dataToResponse,
+    data,
 });
 exports.sucessStatus = sucessStatus;
 const failedStatus = (errorDescription) => ({

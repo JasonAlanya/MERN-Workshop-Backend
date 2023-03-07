@@ -30,8 +30,12 @@ exports.productsRoutes.post("/", [
     (0, express_validator_1.check)("isActive", "isActive param must be a integer value")
         .optional()
         .isInt(),
-    (0, express_validator_1.check)("createDate", "createDate param must be a date").isString(),
-    (0, express_validator_1.check)("updateDate", "updateDate param must be a date").isString(),
+    (0, express_validator_1.check)("createDate", "createDate param must be a date")
+        .optional()
+        .isString(),
+    (0, express_validator_1.check)("updateDate", "updateDate param must be a date")
+        .optional()
+        .isString(),
     (0, express_validator_1.check)("fullProductName", "fullProductName must be max 100").isLength({
         max: 100,
     }),
@@ -82,8 +86,12 @@ exports.productsRoutes.put("/:id", [
     (0, express_validator_1.check)("isActive", "isActive param must be a integer value")
         .optional()
         .isInt(),
-    //check("createDate", "createDate param must be a integer value").isString(),
-    //check("updateDate", "updateDate param must be a integer value").isString(),
+    (0, express_validator_1.check)("createDate", "createDate param must be a integer value")
+        .optional()
+        .isString(),
+    (0, express_validator_1.check)("updateDate", "updateDate param must be a integer value")
+        .optional()
+        .isString(),
     (0, express_validator_1.check)("fullProductName", "fullProductName must be max 100").isLength({
         max: 100,
     }),

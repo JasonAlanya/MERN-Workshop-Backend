@@ -2,9 +2,11 @@ import { IData } from "../interfaces/datamodel.interface";
 
 export class ModelData<T> {
   private _records: IData<T>[];
+
   constructor() {
     this._records = [];
   }
+
   public loadData(data: T[]) {
     data.map((record) => this.create(record));
   }
@@ -28,6 +30,7 @@ export class ModelData<T> {
       }, 500);
     });
   }
+
   public find(): Promise<IData<T>[]> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -35,6 +38,7 @@ export class ModelData<T> {
       }, 500);
     });
   }
+
   public findById(id: number): Promise<IData<T>> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -45,6 +49,7 @@ export class ModelData<T> {
       }, 500);
     });
   }
+
   public updateOneById(id: number, data: T): Promise<IData<T>> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -61,6 +66,7 @@ export class ModelData<T> {
       }, 500);
     });
   }
+
   public deleteOneById(id: number): Promise<IData<T>> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

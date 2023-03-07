@@ -12,8 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CategoriesService = void 0;
 const ModelData_1 = require("../models/ModelData");
 const category_1 = require("../models/category");
-const connectiondb_1 = require("../database/connectiondb");
-const sequelize_1 = require("sequelize");
 class CategoriesService {
     constructor() {
         this.categoryModel = new ModelData_1.ModelData();
@@ -28,9 +26,12 @@ class CategoriesService {
     getAll() {
         return __awaiter(this, void 0, void 0, function* () {
             //return await this.categoryModel.find();
-            //return await Category.findAll();
-            return yield connectiondb_1.db.query(`SELECT child.*, parent.categoryName as parentCategoryName FROM categories AS child
-      LEFT JOIN categories AS parent ON child.categoriesParent_id=parent.id`, { type: sequelize_1.QueryTypes.SELECT });
+            return yield category_1.Category.findAll();
+            /*return await db.query(
+              `SELECT child.*, parent.categoryName as parentCategoryName FROM categories AS child
+              LEFT JOIN categories AS parent ON child.categoriesParent_id=parent.id`,
+              { type: QueryTypes.SELECT }
+            );*/
         });
     }
     getOneById(id) {

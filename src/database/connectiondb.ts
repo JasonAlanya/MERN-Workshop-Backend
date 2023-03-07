@@ -7,7 +7,7 @@ export const db = new Sequelize(
   process.env.DB_USERNAME as string,
   process.env.DB_PASSWORD as string,
   {
-    host: "localhost",
+    host: process.env.DB_HOST,
     dialect: "mysql",
     define: {
       scopes: {

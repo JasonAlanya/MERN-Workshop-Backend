@@ -2,9 +2,9 @@ import { EMAIL_DOMAINS } from "../data/domains";
 import { STREET_NAMES, STREET_TYPES } from "../data/locations";
 import { GIRLS_NAMES, LAST_NAMES, MEN_NAMES } from "../data/people";
 import { ISupplier } from "../interfaces/supplier.interface";
-import { user } from "../types/user.type";
+import { fullname } from "../types/user.type";
 
-const generatePerson = (): user => {
+const generatePerson = (): fullname => {
   const allNames: string[][] = [MEN_NAMES, GIRLS_NAMES];
   const menOrGirl: number = Math.floor(Math.random() * 2);
   let firstName: string =
@@ -24,7 +24,7 @@ const generatePerson = (): user => {
   return { firstName, secondName, lastName };
 };
 
-const generateUserFullName = (generalUser: user): string => {
+const generateUserFullName = (generalUser: fullname): string => {
   return (
     generalUser.firstName +
     " " +
@@ -44,7 +44,7 @@ const generateAddress = (): string => {
   );
 };
 
-const generateUserEmail = (generalUser: user): string => {
+const generateUserEmail = (generalUser: fullname): string => {
   return (
     generalUser.firstName +
     generalUser.lastName +
@@ -60,7 +60,7 @@ const generateUserPhone = (): string => {
 export const genSuppliers = (n: Number = 10): ISupplier[] => {
   let suppliers: ISupplier[] = [];
   for (let i: number = 0; i < n; i++) {
-    const userData: user = generatePerson();
+    const userData: fullname = generatePerson();
 
     suppliers.push({
       //id: i + 1,
