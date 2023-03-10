@@ -50,7 +50,8 @@ class ProductsController {
                     discount_id,
                     parentProduct_id,*/
                 });
-                res.json((0, statuses_1.sucessStatus)(product));
+                res.json(product);
+                //res.json(sucessStatus(product));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -61,7 +62,8 @@ class ProductsController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const products = yield productsService.getAll();
-                res.json((0, statuses_1.sucessStatus)(products));
+                res.json(products);
+                //res.json(sucessStatus(products));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -73,7 +75,8 @@ class ProductsController {
             try {
                 const { id } = req.params;
                 const product = yield productsService.getOneById(+id);
-                res.json((0, statuses_1.sucessStatus)(product));
+                res.json(product);
+                //res.json(sucessStatus(product));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -117,7 +120,8 @@ class ProductsController {
                     discount_id,
                     parentProduct_id,*/
                 });
-                res.json((0, statuses_1.sucessStatus)(product));
+                res.json(product);
+                //res.json(sucessStatus(product));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -129,7 +133,8 @@ class ProductsController {
             try {
                 const { id } = req.params;
                 const product = yield productsService.remove(+id);
-                res.json((0, statuses_1.sucessStatus)(product));
+                res.json(product);
+                //res.json(sucessStatus(product));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));

@@ -61,7 +61,8 @@ export class ProductsController {
         discount_id,
         parentProduct_id,*/
       });
-      res.json(sucessStatus(product));
+      res.json(product);
+      //res.json(sucessStatus(product));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -69,7 +70,8 @@ export class ProductsController {
   async getAll(req: Request, res: Response) {
     try {
       const products = await productsService.getAll();
-      res.json(sucessStatus(products));
+      res.json(products);
+      //res.json(sucessStatus(products));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -79,7 +81,8 @@ export class ProductsController {
     try {
       const { id } = req.params;
       const product = await productsService.getOneById(+id);
-      res.json(sucessStatus(product));
+      res.json(product);
+      //res.json(sucessStatus(product));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -142,7 +145,8 @@ export class ProductsController {
         discount_id,
         parentProduct_id,*/
       });
-      res.json(sucessStatus(product));
+      res.json(product);
+      //res.json(sucessStatus(product));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -151,7 +155,8 @@ export class ProductsController {
     try {
       const { id } = req.params;
       const product = await productsService.remove(+id);
-      res.json(sucessStatus(product));
+      res.json(product);
+      //res.json(sucessStatus(product));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }

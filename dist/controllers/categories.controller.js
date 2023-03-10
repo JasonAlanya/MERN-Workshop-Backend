@@ -23,7 +23,8 @@ class CategoriesController {
                     photoType,
                     categoriesParent_id,
                 });
-                res.json((0, statuses_1.sucessStatus)(category));
+                res.json(category);
+                //res.json(sucessStatus(category));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -34,7 +35,8 @@ class CategoriesController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const categories = yield categoriesService.getAll();
-                res.json((0, statuses_1.sucessStatus)(categories));
+                res.json(categories);
+                //res.json(sucessStatus(categories));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -46,7 +48,8 @@ class CategoriesController {
             try {
                 const { id } = req.params;
                 const category = yield categoriesService.getOneById(+id);
-                res.json((0, statuses_1.sucessStatus)(category));
+                res.json(category);
+                //res.json(sucessStatus(category));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -63,7 +66,8 @@ class CategoriesController {
                     photoType,
                     categoriesParent_id,
                 });
-                res.json((0, statuses_1.sucessStatus)(category));
+                res.json(category);
+                //res.json(sucessStatus(category));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));
@@ -75,7 +79,8 @@ class CategoriesController {
             try {
                 const { id } = req.params;
                 const category = yield categoriesService.remove(+id);
-                res.json((0, statuses_1.sucessStatus)(category));
+                res.json(category);
+                //res.json(sucessStatus(category));
             }
             catch (error) {
                 res.status(400).json((0, statuses_1.failedStatus)(error));

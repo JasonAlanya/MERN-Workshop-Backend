@@ -13,9 +13,9 @@ const productsService = new ProductsService();
 export class SeedService {
   public async createSeed() {
     await this.deleteDB();
-    await this.createCategories();
-    await this.createSuppliers();
-    await this.createProducts();
+    //await this.createCategories();
+    //await this.createSuppliers();
+    //await this.createProducts();
   }
 
   private async deleteDB() {

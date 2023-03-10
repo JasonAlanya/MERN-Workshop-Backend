@@ -20,7 +20,7 @@ export interface IProduct {
   discountAmount: number;
   productscol?: string;
   categories_id: number;
-  supplier_id: number;
+  supplier_id?: number;
   /*tenant_id: number;
   retailer_id: number;
   discount_id: number;

@@ -13,7 +13,8 @@ export class CategoriesController {
         photoType,
         categoriesParent_id,
       });
-      res.json(sucessStatus(category));
+      res.json(category);
+      //res.json(sucessStatus(category));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -22,7 +23,8 @@ export class CategoriesController {
   async getAll(req: Request, res: Response) {
     try {
       const categories = await categoriesService.getAll();
-      res.json(sucessStatus(categories));
+      res.json(categories);
+      //res.json(sucessStatus(categories));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -32,7 +34,8 @@ export class CategoriesController {
     try {
       const { id } = req.params;
       const category = await categoriesService.getOneById(+id);
-      res.json(sucessStatus(category));
+      res.json(category);
+      //res.json(sucessStatus(category));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -47,7 +50,8 @@ export class CategoriesController {
         photoType,
         categoriesParent_id,
       });
-      res.json(sucessStatus(category));
+      res.json(category);
+      //res.json(sucessStatus(category));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }
@@ -56,7 +60,8 @@ export class CategoriesController {
     try {
       const { id } = req.params;
       const category = await categoriesService.remove(+id);
-      res.json(sucessStatus(category));
+      res.json(category);
+      //res.json(sucessStatus(category));
     } catch (error) {
       res.status(400).json(failedStatus(error));
     }

@@ -25,9 +25,9 @@ class SeedService {
     createSeed() {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.deleteDB();
-            yield this.createCategories();
-            yield this.createSuppliers();
-            yield this.createProducts();
+            //await this.createCategories();
+            //await this.createSuppliers();
+            //await this.createProducts();
         });
     }
     deleteDB() {

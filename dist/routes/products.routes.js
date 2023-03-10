@@ -49,8 +49,8 @@ exports.productsRoutes.post("/", [
     (0, express_validator_1.check)("productscol", "productscol must be max 45").isLength({ max: 45 }),
     (0, express_validator_1.check)("categories_id", "categories_id is required").not().isEmpty(),
     (0, express_validator_1.check)("categories_id", "categories_idparam must be a number value").isInt(),
-    (0, express_validator_1.check)("supplier_id", "supplier_id is required").not().isEmpty(),
-    (0, express_validator_1.check)("supplier_id", "supplier_id param must be a number value").isInt(),
+    //check("supplier_id", "supplier_id is required").not().isEmpty(),
+    //check("supplier_id", "supplier_id param must be a number value").isInt(),
     /*check("tenant_id", "tenant_id is required").not().isEmpty(),
     check("tenant_id", "tenant_id param must be a number value").isInt(),
     check("retailer_id", "retailer_id is required").not().isEmpty(),
@@ -105,8 +105,8 @@ exports.productsRoutes.put("/:id", [
     (0, express_validator_1.check)("productscol", "productscol must be max 45").isLength({ max: 45 }),
     (0, express_validator_1.check)("categories_id", "categories_id is required").not().isEmpty(),
     (0, express_validator_1.check)("categories_id", "categories_id param must be a number value").isInt(),
-    (0, express_validator_1.check)("supplier_id", "supplier_id is required").not().isEmpty(),
-    (0, express_validator_1.check)("supplier_id", "supplier_id param must be a number value").isInt(),
+    //check("supplier_id", "supplier_id is required").not().isEmpty(),
+    //check("supplier_id", "supplier_id param must be a number value").isInt(),
     valid_fields_middleware_1.ValidFields,
 ], productsController.update);
 exports.productsRoutes.delete("/:id", [(0, express_validator_1.check)("id", "Id param must be a number value").isNumeric(), valid_fields_middleware_1.ValidFields], productsController.remove);
